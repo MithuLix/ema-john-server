@@ -10,13 +10,13 @@ const port = 5000;
 app.use(bodyParser.json());
 app.use(cors());
 //mongo URI
-const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.blzf0.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.tbdbuji.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 //mongo Client
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 //default app get
 app.get('/', (req, res) => {
-  res.send('Hello World!, ema-john server')
+  res.send('-------------------->> ema-john server is running <<--------------------');
 })
 
 
